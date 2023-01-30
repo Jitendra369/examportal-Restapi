@@ -27,7 +27,7 @@ public class Category {
 	
 //	Eager -> when we fetch cate then, all the quize can be excessable , cascade same as fetch
 //	one catg. can have many quize, mapped with Quize table categ. col
-	@OneToMany(mappedBy = "category", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
 	@JsonIgnore
 	private Set<Quize> quizes = new LinkedHashSet<>();
 	

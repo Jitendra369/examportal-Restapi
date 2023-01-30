@@ -39,9 +39,20 @@ public class Quize {
 	@OneToMany(mappedBy = "quize", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JsonIgnore
 	private Set<Questions> questions = new HashSet<>();
-
+	
 	
 
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public Set<Questions> getQuestions() {
+		return questions;
+	}
+
+	public void setQuestions(Set<Questions> questions) {
+		this.questions = questions;
+	}
 
 	public Category getCategory() {
 		return category;
